@@ -1,0 +1,10 @@
+.App {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+h1 {
+  margin-bottom: 20px;
+  margin-top: 40px; /* Añade un margen en la parte superior para posicionar el h1 en la parte superior de la página */
+}
