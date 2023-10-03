@@ -12,6 +12,7 @@
 
 h1 {
   margin: 0; /* Remueve los márgenes para asegurar que no haya espacio extra alrededor del h1 */
+  color: #3d87ff;
 }
 
 .logo {
