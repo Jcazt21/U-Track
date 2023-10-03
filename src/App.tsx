@@ -5,8 +5,10 @@ import "./App.css";
 function App() {
   return (
     <div className="App">
-      <h1>U-Track</h1>
-      <img src="public/logo.png" alt="logo" />
+      <div className="header">
+        <h1>U-Track</h1>
+        <img src="public/logo.png" alt="logo" className="logo" />
+      </div>
       <LoginForm />
     </div>
   );

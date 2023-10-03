@@ -4,7 +4,17 @@
   align-items: center;
 }
 
+.header {
+  display: flex;
+  align-items: center;
+  margin-top: 40px;
+}
+
 h1 {
-  margin-bottom: 20px;
-  margin-top: 40px; /* Añade un margen en la parte superior para posicionar el h1 en la parte superior de la página */
+  margin: 0; /* Remueve los márgenes para asegurar que no haya espacio extra alrededor del h1 */
+}
+
+.logo {
+  height: calc(1.5em + 40px);
+  margin-left: 20px;
 }
