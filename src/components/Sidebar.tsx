@@ -5,22 +5,32 @@ const Sidebar: React.FC = () => {
   return (
     <div className="sidebar-container">
       <div className="sidebar">
-        <h2 className="sidebar-title">U-Track</h2> {/* Agregado título */}
+        <h2 className="sidebar-title">U-Track</h2>
         <ul className="list-unstyled">
           <li>
-            <a href="#home">Panel</a>
+            <a href="#home">
+              <i className="fas fa-home"></i> Panel
+            </a>
           </li>
           <li>
-            <a href="#perfil">Perfil</a>
+            <a href="#perfil">
+              <i className="fas fa-user"></i> Perfil
+            </a>
           </li>
           <li>
-            <a href="#Calificaciones">Ver Calificaciones</a>
+            <a href="#Calificaciones">
+              <i className="fas fa-star"></i> Ver Calificaciones
+            </a>
           </li>
           <li>
-            <a href="#Asignaturas">Asignaturas</a>
+            <a href="#Asignaturas">
+              <i className="fas fa-book"></i> Asignaturas
+            </a>
           </li>
           <li>
-            <a href="#Pensum">Visualizar Pensum</a>
+            <a href="#Pensum">
+              <i className="fas fa-clipboard-list"></i> Visualizar Pensum
+            </a>
           </li>
         </ul>
       </div>
