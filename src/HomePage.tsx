@@ -1,14 +1,13 @@
 import React from "react";
 import Sidebar from "./components/Sidebar"; // Importa el componente del sidebar
+import Mnsj from "./components/Mnsj";
 import "./HomePage.css";
 
 const HomePage: React.FC = () => {
   return (
     <div className="home-page">
       <Sidebar />
-      <div className="content">
-        {/* Agrega más contenido según sea necesario */}
-      </div>
+      <div className="content">{/* <Mnsj /> */}</div>
     </div>
   );
 };
