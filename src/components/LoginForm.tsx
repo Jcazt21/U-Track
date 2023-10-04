@@ -1,15 +1,31 @@
 import React, { useState } from "react";
+import axios from 'axios';
+import { useNavigate } from 'react-router-dom';
 import "./LoginForm.css";
 
 const LoginForm: React.FC = () => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
+  const navigate = useNavigate();
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    console.log("Username:", username);
-    console.log("Password:", password);
-    // Aquí puedes agregar la lógica para autenticar al usuario
+
+    try {
+      const response = await axios.post('http://localhost:8000/login/', {
+        username,
+        password
+      });
+
+      if (response.data && response.data.access) { // Asegúrate de que la respuesta contiene los datos esperados
+        localStorage.setItem('token', response.data.access);
+        navigate('/HomePage');
+      } else {
+        console.error('Error en la autenticación');
+      }
+    } catch (error) {
+      console.error('Error en la solicitud de login', error);
+    }
   };
 
   return (
