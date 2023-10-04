@@ -5,7 +5,7 @@ import "./HomePage.css";
 const HomePage: React.FC = () => {
   return (
     <div className="home-page">
-      <Sidebar /> {/* Agrega el sidebar aquí */}
+      <Sidebar />
       <div className="content">
         {/* Agrega más contenido según sea necesario */}
       </div>
