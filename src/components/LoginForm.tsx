@@ -32,7 +32,7 @@ const LoginForm: React.FC = () => {
     <form onSubmit={handleSubmit} className="login-form">
       <input
         type="text"
-        placeholder="ID"
+        placeholder="ID institucional"
         value={username}
         onChange={(e) => setUsername(e.target.value)}
       />
