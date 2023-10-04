@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import axios from 'axios';
-import { useNavigate } from 'react-router-dom';
+import axios from "axios";
+import { useNavigate } from "react-router-dom";
 import "./LoginForm.css";
 
 const LoginForm: React.FC = () => {
@@ -12,19 +12,20 @@ const LoginForm: React.FC = () => {
     e.preventDefault();
 
     try {
-      const response = await axios.post('http://localhost:8000/login/', {
+      const response = await axios.post("http://localhost:8000/login/", {
         username,
-        password
+        password,
       });
 
-      if (response.data && response.data.access) { // Asegúrate de que la respuesta contiene los datos esperados
-        localStorage.setItem('token', response.data.access);
-        navigate('/HomePage');
+      if (response.data && response.data.access) {
+        // Asegúrate de que la respuesta contiene los datos esperados
+        localStorage.setItem("token", response.data.access);
+        navigate("/HomePage");
       } else {
-        console.error('Error en la autenticación');
+        console.error("Error en la autenticación");
       }
     } catch (error) {
-      console.error('Error en la solicitud de login', error);
+      console.error("Error en la solicitud de inicio sesion", error);
     }
   };
 
