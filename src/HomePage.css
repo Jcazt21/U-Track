@@ -1,3 +1,15 @@
 .home-page {
   display: flex;
 }
+
+.Table {
+  position: absolute;
+  top: 300px; /* Ajusta según sea necesario */
+  left: 420px; /* Ajusta según sea necesario */
+}
+
+.Mensaje {
+  position: absolute;
+  top: 70px;
+  left: 420px;
+}
