@@ -1,6 +1,7 @@
 import React from "react";
 import "./ProfilePage.css";
 import Sidebar from "./components/Sidebar";
+import { Link } from "react-router-dom"; // Importa el componente Link
 
 const ProfilePage: React.FC = () => {
   return (
@@ -15,7 +16,11 @@ const ProfilePage: React.FC = () => {
         <p className="id">ID: 123456</p>
         <p className="career">Carrera: Ingeniería en Sistemas</p>
       </div>
-      <h3 className="soporte">Soporte</h3>
+      <Link to="/SupportPage" className="soporte-link">
+        {" "}
+        {/* Agrega el componente Link aquí */}
+        <h3 className="soporte">Soporte</h3>
+      </Link>
       <Sidebar />
     </div>
   );
