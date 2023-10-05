@@ -17,6 +17,7 @@ const HomePage: React.FC = () => {
     <div className="home-page">
       <Sidebar />
       <h1 className="title">Panel Estundiantil</h1>
+      <h2 className="titleTable">Horario</h2>
       <div className="Mensaje">
         <Mnsj />
       </div>
