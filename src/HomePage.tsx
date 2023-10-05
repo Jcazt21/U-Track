@@ -16,6 +16,7 @@ const HomePage: React.FC = () => {
   return (
     <div className="home-page">
       <Sidebar />
+      <h1 className="title">Panel Estundiantil</h1>
       <div className="Mensaje">
         <Mnsj />
       </div>
@@ -53,18 +54,6 @@ const HomePage: React.FC = () => {
               <TableCell>Aseguramiento de la Calidad de Software</TableCell>
               <TableCell>Lu 8-10, Mi 8-10</TableCell>
               <TableCell className="text-right">GC302, GC212</TableCell>
-            </TableRow>
-            <TableRow>
-              <TableCell className="font-medium">IDS-302</TableCell>
-              <TableCell>Diseño de Software</TableCell>
-              <TableCell>Lu 8-10, Mi 8-10</TableCell>
-              <TableCell className="text-right">GC302</TableCell>
-            </TableRow>
-            <TableRow>
-              <TableCell className="font-medium">IDS-302</TableCell>
-              <TableCell>Diseño de Software</TableCell>
-              <TableCell>Lu 8-10, Mi 8-10</TableCell>
-              <TableCell className="text-right">GC302</TableCell>
             </TableRow>
             <TableRow>
               <TableCell className="font-medium">IDS-302</TableCell>

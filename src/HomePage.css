@@ -35,3 +35,9 @@
   top: 70px;
   left: 420px;
 }
+
+.title {
+  position: absolute;
+  top: 12px;
+  left: 420px;
+}
