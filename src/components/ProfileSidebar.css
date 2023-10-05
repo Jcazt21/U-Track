@@ -1,0 +1,37 @@
+.profile-sidebar-container {
+  font-family: "Lato", sans-serif;
+  position: fixed;
+  right: 0;
+  top: 0;
+  height: 939px;
+  width: 370px;
+  background-color: #ebebeb;
+  z-index: 1000;
+  box-shadow: -1px 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.profile-sidebar {
+  height: 100%;
+  width: 100%;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.profile-picture img {
+  width: 150px; /* Ajusta según tus necesidades */
+  height: 150px; /* Ajusta según tus necesidades */
+  border-radius: 50%; /* Esto hará que la imagen sea redonda */
+}
+
+.username {
+  font-size: 24px;
+  color: #3d87ff;
+}
+
+.institutional-id {
+  font-size: 18px;
+  color: #333;
+}

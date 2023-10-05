@@ -1,5 +1,6 @@
 import React from "react";
 import Sidebar from "./components/Sidebar";
+import ProfileSidebar from "./components/ProfileSidebar";
 import Mnsj from "./components/Mnsj";
 import "./HomePage.css";
 import {
@@ -16,6 +17,7 @@ const HomePage: React.FC = () => {
   return (
     <div className="home-page">
       <Sidebar />
+      <ProfileSidebar />
       <h1 className="title">Panel Estundiantil</h1>
       <h2 className="titleTable">Horario</h2>
       <div className="Mensaje">
