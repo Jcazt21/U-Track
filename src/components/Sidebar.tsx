@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom"; // Importa Link de react-router-dom
 import "./Sidebar.css";
 
 const Sidebar: React.FC = () => {
@@ -8,29 +9,37 @@ const Sidebar: React.FC = () => {
         <h2 className="sidebar-title">U-Track</h2>
         <ul className="list-unstyled">
           <li>
-            <a href="#home">
+            <Link to="/HomePage">
+              {" "}
+              {/* Cambia <a> por <Link> y href por to */}
               <i className="fas fa-home"></i> Panel
-            </a>
+            </Link>
           </li>
           <li>
-            <a href="#perfil">
+            <Link to="/ProfilePage">
               <i className="fas fa-user"></i> Perfil
-            </a>
+            </Link>
           </li>
           <li>
-            <a href="#Calificaciones">
+            <Link to="/calificaciones">
+              {" "}
+              {/* Cambia <a> por <Link> y href por to */}
               <i className="fas fa-star"></i> Ver Calificaciones
-            </a>
+            </Link>
           </li>
           <li>
-            <a href="#Asignaturas">
+            <Link to="/asignaturas">
+              {" "}
+              {/* Cambia <a> por <Link> y href por to */}
               <i className="fas fa-book"></i> Asignaturas
-            </a>
+            </Link>
           </li>
           <li>
-            <a href="#Pensum">
+            <Link to="/pensum">
+              {" "}
+              {/* Cambia <a> por <Link> y href por to */}
               <i className="fas fa-clipboard-list"></i> Visualizar Pensum
-            </a>
+            </Link>
           </li>
         </ul>
         <button className="logout">Cerrar Sesion</button>

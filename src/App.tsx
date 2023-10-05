@@ -1,6 +1,7 @@
 import React from "react";
 import LoginForm from "./components/LoginForm";
 import HomePage from "./HomePage";
+import ProfilePage from "./ProfilePage";
 import "./App.css";
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 
@@ -25,6 +26,7 @@ function App() {
             }
           />
           <Route path="/HomePage" element={<HomePage />} />
+          <Route path="/ProfilePage" element={<ProfilePage />} />
         </Routes>
       </div>
     </Router>
