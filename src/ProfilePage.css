@@ -28,4 +28,12 @@
 }
 
 .soporte {
+  color: #69a2ff;
+  position: fixed; /* Esto hará que el elemento esté fijo en una posición específica de la ventana del navegador */
+  bottom: 0; /* Esto posicionará el elemento en la parte inferior de la ventana */
+  left: 50%; /* Esto centrará el elemento horizontalmente */
+  transform: translateX(
+    -50%
+  ); /* Esto ajustará la posición para que esté perfectamente centrado */
+  z-index: 1000;
 }
