@@ -7,14 +7,12 @@ const ProfilePage: React.FC = () => {
   return (
     <div className="profile-container">
       <div className="profile-info">
-        <img
-          src="path-to-your-image.jpg"
-          alt="Profile"
-          className="profile-picture"
-        />
-        <h2 className="name">Nombre Apellido</h2>
+        <img src="public/prof.png" alt="Profile" className="profile-picture" />
+        <h2 className="name">Nombre</h2>
+        <h2 className="lastname">Apellido</h2>
         <p className="id">ID: 123456</p>
         <p className="career">Carrera: Ingeniería en Sistemas</p>
+        <p className="rol">Estudiante</p>
       </div>
       <Link to="/SupportPage" className="soporte-link">
         {" "}

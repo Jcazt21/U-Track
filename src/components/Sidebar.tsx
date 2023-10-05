@@ -42,7 +42,12 @@ const Sidebar: React.FC = () => {
             </Link>
           </li>
         </ul>
-        <button className="logout">Cerrar Sesion</button>
+        <Link to="/">
+          {" "}
+          {/* Agrega esta línea */}
+          <button className="logout">Cerrar Sesion</button>
+        </Link>{" "}
+        {/* Agrega esta línea */}
       </div>
     </div>
   );
