@@ -23,7 +23,7 @@ const HomePage: React.FC = () => {
         <Table>
           <TableHeader>
             <TableRow>
-              <TableHead className="w-[100px]">Seccion</TableHead>
+              <TableHead className="w-1/4">Seccion</TableHead>
               <TableHead>Asignatura</TableHead>
               <TableHead>Horario</TableHead>
               <TableHead className="text-right">Curso</TableHead>
@@ -33,19 +33,43 @@ const HomePage: React.FC = () => {
             <TableRow>
               <TableCell className="font-medium">IDS-302</TableCell>
               <TableCell>Diseño de Software</TableCell>
-              <TableCell>Ma 8-10</TableCell>
+              <TableCell>Lu 8-10, Mi 8-10</TableCell>
               <TableCell className="text-right">GC302</TableCell>
             </TableRow>
             <TableRow>
               <TableCell className="font-medium">IDS-302</TableCell>
               <TableCell>Diseño de Software</TableCell>
-              <TableCell>Ma 8-10</TableCell>
+              <TableCell>Lu 8-10, Mi 8-10</TableCell>
               <TableCell className="text-right">GC302</TableCell>
             </TableRow>
             <TableRow>
               <TableCell className="font-medium">IDS-302</TableCell>
               <TableCell>Diseño de Software</TableCell>
-              <TableCell>Ma 8-10</TableCell>
+              <TableCell>Lu 8-10, Mi 8-10</TableCell>
+              <TableCell className="text-right">GC302</TableCell>
+            </TableRow>
+            <TableRow>
+              <TableCell className="font-medium">IDS-302</TableCell>
+              <TableCell>Aseguramiento de la Calidad de Software</TableCell>
+              <TableCell>Lu 8-10, Mi 8-10</TableCell>
+              <TableCell className="text-right">GC302, GC212</TableCell>
+            </TableRow>
+            <TableRow>
+              <TableCell className="font-medium">IDS-302</TableCell>
+              <TableCell>Diseño de Software</TableCell>
+              <TableCell>Lu 8-10, Mi 8-10</TableCell>
+              <TableCell className="text-right">GC302</TableCell>
+            </TableRow>
+            <TableRow>
+              <TableCell className="font-medium">IDS-302</TableCell>
+              <TableCell>Diseño de Software</TableCell>
+              <TableCell>Lu 8-10, Mi 8-10</TableCell>
+              <TableCell className="text-right">GC302</TableCell>
+            </TableRow>
+            <TableRow>
+              <TableCell className="font-medium">IDS-302</TableCell>
+              <TableCell>Diseño de Software</TableCell>
+              <TableCell>Lu 8-10, Mi 8-10</TableCell>
               <TableCell className="text-right">GC302</TableCell>
             </TableRow>
           </TableBody>

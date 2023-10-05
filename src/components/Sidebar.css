@@ -4,14 +4,14 @@
   left: 0;
   top: 0;
   height: 939px;
-  width: 400px;
+  width: 370px;
   background-color: #ebebeb;
   z-index: 1000;
-  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+  box-shadow: 1px 0 5px rgba(0, 0, 0, 0.1);
 }
 
 .sidebar {
-  height: 100%;
+  height: 95%;
   width: 100%;
   padding: 20px;
   display: flex;
@@ -53,4 +53,27 @@
   color: #3d87ff;
   background-color: #d9d9d9;
   font-weight: bold;
+}
+
+.logout {
+  margin-top: 20px; /* Añade un margen en la parte superior para separar el botón de los otros elementos */
+  padding: 10px 20px;
+  font-size: 18px;
+  color: #e81123;
+  background-color: #dbdbdb;
+  border: 3px solid #e81123;
+  border-radius: 15px;
+  cursor: pointer;
+  align-self: center;
+  width: 300px;
+}
+
+.logout:hover {
+  background-color: #e81123;
+  color: #ebebeb;
+}
+
+.logout:active {
+  background-color: #a81522;
+  color: white;
 }

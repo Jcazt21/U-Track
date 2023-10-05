@@ -4,8 +4,30 @@
 
 .Table {
   position: absolute;
-  top: 300px; /* Ajusta según sea necesario */
-  left: 420px; /* Ajusta según sea necesario */
+  top: 300px;
+  left: 420px;
+  border: 3px solid #ddd; /* Añade un borde alrededor del contenedor de la tabla */
+  border-radius: 10px;
+  width: 650px;
+}
+
+.Table table {
+  width: 100%;
+  table-layout: auto;
+}
+
+.Table th,
+.Table td {
+  flex: 1;
+  width: auto;
+  padding: 20px; /* Ajusta el relleno dentro de las celdas para hacerlas más altas */
+  text-align: left; /* Alinea el texto a la izquierda */
+  border-bottom: 1px solid #ddd; /* Añade un borde inferior para separar las filas */
+  border-right: 1px solid #ddd;
+}
+
+.Table th {
+  background-color: #f2f2f2; /* Añade un color de fondo a las celdas del encabezado para diferenciarlas */
 }
 
 .Mensaje {

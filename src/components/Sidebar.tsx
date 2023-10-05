@@ -33,6 +33,7 @@ const Sidebar: React.FC = () => {
             </a>
           </li>
         </ul>
+        <button className="logout">Cerrar Sesion</button>
       </div>
     </div>
   );
