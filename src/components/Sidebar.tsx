@@ -27,7 +27,7 @@ const Sidebar: React.FC = () => {
             </Link>
           </li>
           <li>
-            <Link to="/asignaturas">
+            <Link to="/AsignaturasPage">
               {" "}
               {/* Cambia <a> por <Link> y href por to */}
               <i className="fas fa-book"></i> Asignaturas
