@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom"; // Importa Link
 import "./LoginForm.css";
 
 const LoginForm: React.FC = () => {
@@ -18,7 +18,6 @@ const LoginForm: React.FC = () => {
       });
 
       if (response.data && response.data.access) {
-        // Asegúrate de que la respuesta contiene los datos esperados
         localStorage.setItem("token", response.data.access);
         navigate("/HomePage");
       } else {
@@ -44,6 +43,9 @@ const LoginForm: React.FC = () => {
         onChange={(e) => setPassword(e.target.value)}
       />
       <button type="submit">Iniciar Sesion</button>
+      <Link to="/RecuperarPage" className="recover-password-link">
+        Recuperar Contraseña
+      </Link>{" "}
     </form>
   );
 };

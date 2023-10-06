@@ -3,6 +3,8 @@ import LoginForm from "./components/LoginForm";
 import HomePage from "./HomePage";
 import ProfilePage from "./ProfilePage";
 import SupportPage from "./SupportPage";
+import CalificacionesPage from "./CalificacionesPage";
+import AsignaturasPage from "./AsignaturasPage";
 import "./App.css";
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import RecuperarPage from "./RecuperarPage";
@@ -31,8 +33,11 @@ function App() {
           <Route path="/HomePage" element={<HomePage />} />
           <Route path="/ProfilePage" element={<ProfilePage />} />
           <Route path="/SupportPage" element={<SupportPage />} />
+          <Route path="/CalificacionesPage" element={<CalificacionesPage />} />
           <Route path="/RecuperarPage" element={<RecuperarPage />} />
           <Route path="/PensumPage" element={<PensumPage />} />
+          <Route path="/AsignaturasPage" element={<AsignaturasPage />} />
+
         </Routes>
       </div>
     </Router>

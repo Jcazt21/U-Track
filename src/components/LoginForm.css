@@ -33,3 +33,11 @@
   border: 3px solid #004bc4;
   color: #004bc4;
 }
+
+.recover-password-link {
+  color: blue;
+  text-decoration: underline;
+  cursor: pointer;
+  margin-top: 10px;
+  display: inline-block;
+}

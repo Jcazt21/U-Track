@@ -1,0 +1,57 @@
+[
+    {
+      "asignatura": "Diseño de Software",
+      "trimestre": "4",
+      "calificacion": "87",
+      "alpha": "B+"
+    },
+    {
+      "asignatura": "Algoritmos y Estructuras de Datos",
+      "trimestre": "3",
+      "calificacion": "90",
+      "alpha": "A-"
+    },
+    {
+      "asignatura": "Bases de Datos",
+      "trimestre": "4",
+      "calificacion": "85",
+      "alpha": "B"
+    },
+    {
+      "asignatura": "Redes de Computadoras",
+      "trimestre": "4",
+      "calificacion": "88",
+      "alpha": "B+"
+    },
+    {
+      "asignatura": "Inteligencia Artificial",
+      "trimestre": "4",
+      "calificacion": "92",
+      "alpha": "A-"
+    },
+    {
+      "asignatura": "Desarrollo Web",
+      "trimestre": "4",
+      "calificacion": "89",
+      "alpha": "B+"
+    },
+    {
+      "asignatura": "Sistemas Operativos",
+      "trimestre": "4",
+      "calificacion": "86",
+      "alpha": "B"
+    },
+    {
+      "asignatura": "Seguridad Informática",
+      "trimestre": "4",
+      "calificacion": "91",
+      "alpha": "A-"
+    },
+    {
+      "asignatura": "Aseguramiento de la Calidad de Software",
+      "trimestre": "4",
+      "calificacion": "91",
+      "alpha": "A-"
+    }
+  ]
+  

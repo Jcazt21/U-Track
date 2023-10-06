@@ -3,13 +3,15 @@
       "seccion": "IDS-302",
       "asignatura": "Diseño de Software",
       "horario": "Ma 8-10",
-      "curso": "GC302"
+      "curso": "GC302",
+      "docente": "Juan Alberto Guzman de la Cruz"
     },
     {
       "seccion": "MAT-101",
       "asignatura": "Matemáticas Básicas",
       "horario": "Mi 10-12",
-      "curso": "MB101"
+      "curso": "MB101",
+      "docente": "Juan Alberto de la Cruz"
     },
     {
       "seccion": "PRO-201",
