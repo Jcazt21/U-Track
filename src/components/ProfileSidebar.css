@@ -24,6 +24,8 @@
   width: 150px; /* Ajusta según tus necesidades */
   height: 150px; /* Ajusta según tus necesidades */
   border-radius: 50%; /* Esto hará que la imagen sea redonda */
+  display: block; /* Esto hace que la imagen sea un bloque para que margin: auto funcione */
+  margin: auto; /* Esto centra la imagen horizontalmente */
 }
 
 .username {
