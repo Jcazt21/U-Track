@@ -9,7 +9,6 @@ const ProfilePage: React.FC = () => {
       <div className="profile-info">
         <img src="public/prof.png" alt="Profile" className="profile-picture" />
         <h2 className="name">Nombre</h2>
-        <h2 className="lastname">Apellido</h2>
         <p className="id">ID: 123456</p>
         <p className="career">Carrera: Ingeniería en Sistemas</p>
         <p className="rol">Estudiante</p>

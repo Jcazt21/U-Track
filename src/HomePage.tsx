@@ -3,7 +3,7 @@ import Sidebar from "./components/Sidebar";
 import ProfileSidebar from "./components/ProfileSidebar";
 import Mnsj from "./components/Mnsj";
 import "./HomePage.css";
-import data from "./assets/data.json"; // Asegúrate de que la ruta sea correcta
+import data from "./assets/data.json"; // importamos el json con su ruta
 import {
   Table,
   TableBody,
@@ -35,14 +35,19 @@ const HomePage: React.FC = () => {
             </TableRow>
           </TableHeader>
           <TableBody>
-            {data.map((item, index) => (
-              <TableRow key={index}>
-                <TableCell className="font-medium">{item.seccion}</TableCell>
-                <TableCell>{item.asignatura}</TableCell>
-                <TableCell>{item.horario}</TableCell>
-                <TableCell className="text-right">{item.curso}</TableCell>
-              </TableRow>
-            ))}
+            {data.map(
+              (
+                item,
+                index // declaramos el data.map para que funncione el json.
+              ) => (
+                <TableRow key={index}>
+                  <TableCell className="font-medium">{item.seccion}</TableCell>
+                  <TableCell>{item.asignatura}</TableCell>
+                  <TableCell>{item.horario}</TableCell>
+                  <TableCell className="text-right">{item.curso}</TableCell>
+                </TableRow>
+              )
+            )}
           </TableBody>
         </Table>
       </div>
