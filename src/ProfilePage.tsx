@@ -15,6 +15,8 @@ const ProfilePage: React.FC = () => {
         <p className="id">ID: {user.id}</p>{" "}
         <p className="career">Carrera: {user.career}</p>{" "}
         <p className="rol">{user.rol}</p>{" "}
+        <p className="IndiceLabel">Indice Academico:</p>
+        <p className="indiceP">{user.indice}</p>
       </div>
       <Link to="/SupportPage" className="soporte-link">
         <h3 className="soporte">Soporte</h3>

@@ -1,6 +1,7 @@
 import React from "react";
 import "./ProfileSidebar.css";
 import user from "./user.json";
+import PieChart from "./PieChart"; // Asegúrate de reemplazar './PieChart' con la ruta real al archivo
 
 const ProfileSidebar: React.FC = () => {
   return (
@@ -12,6 +13,10 @@ const ProfileSidebar: React.FC = () => {
           </div>
           <h2 className="username">{user.name}</h2>
           <p className="institutional-id">{user.id}</p>
+          <p className="indiceG">{user.indice}</p>
+          <div className="pie-chart-container">
+            <PieChart /> {/* Aquí se renderiza el componente PieChart */}
+          </div>
         </div>
       ))}
     </div>

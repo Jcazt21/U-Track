@@ -37,3 +37,8 @@
   ); /* Esto ajustará la posición para que esté perfectamente centrado */
   z-index: 1000;
 }
+
+.indiceP {
+  color: #3d87ff;
+  font-size: 32px;
+}
