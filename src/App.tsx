@@ -5,6 +5,7 @@ import ProfilePage from "./ProfilePage";
 import SupportPage from "./SupportPage";
 import "./App.css";
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+import RecuperarPage from "./RecuperarPage";
 
 function App() {
   return (
@@ -29,6 +30,7 @@ function App() {
           <Route path="/HomePage" element={<HomePage />} />
           <Route path="/ProfilePage" element={<ProfilePage />} />
           <Route path="/SupportPage" element={<SupportPage />} />
+          <Route path="/RecuperarPage" element={<RecuperarPage />} />
         </Routes>
       </div>
     </Router>
