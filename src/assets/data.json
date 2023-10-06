@@ -1,0 +1,45 @@
+[
+    {
+      "seccion": "IDS-302",
+      "asignatura": "Diseño de Software",
+      "horario": "Ma 8-10",
+      "curso": "GC302"
+    },
+    {
+      "seccion": "MAT-101",
+      "asignatura": "Matemáticas Básicas",
+      "horario": "Mi 10-12",
+      "curso": "MB101"
+    },
+    {
+      "seccion": "PRO-201",
+      "asignatura": "Programación II",
+      "horario": "Ju 9-11, Vi 10-12",
+      "curso": "P201"
+    },
+    {
+      "seccion": "DB-150",
+      "asignatura": "Bases de Datos",
+      "horario": "Vi 11-1",
+      "curso": "DB150"
+    },
+    {
+      "seccion": "WEB-220",
+      "asignatura": "Desarrollo Web",
+      "horario": "Lu 2-4",
+      "curso": "WEB220"
+    },
+    {
+      "seccion": "AI-330",
+      "asignatura": "Inteligencia Artificial",
+      "horario": "Ma 1-3",
+      "curso": "AI330"
+    },
+    {
+      "seccion": "NET-400",
+      "asignatura": "Aseguramiento de la Calidad del Software",
+      "horario": "Mi 3-5",
+      "curso": "NET400"
+    }
+  ]
+  

@@ -3,6 +3,7 @@ import Sidebar from "./components/Sidebar";
 import ProfileSidebar from "./components/ProfileSidebar";
 import Mnsj from "./components/Mnsj";
 import "./HomePage.css";
+import data from "./assets/data.json"; // Asegúrate de que la ruta sea correcta
 import {
   Table,
   TableBody,
@@ -27,43 +28,21 @@ const HomePage: React.FC = () => {
         <Table>
           <TableHeader>
             <TableRow>
-              <TableHead className="w-1/4">Seccion</TableHead>
+              <TableHead className="font-medium">Seccion</TableHead>
               <TableHead>Asignatura</TableHead>
               <TableHead>Horario</TableHead>
               <TableHead className="text-right">Curso</TableHead>
             </TableRow>
           </TableHeader>
           <TableBody>
-            <TableRow>
-              <TableCell className="font-medium">IDS-302</TableCell>
-              <TableCell>Diseño de Software</TableCell>
-              <TableCell>Lu 8-10, Mi 8-10</TableCell>
-              <TableCell className="text-right">GC302</TableCell>
-            </TableRow>
-            <TableRow>
-              <TableCell className="font-medium">IDS-302</TableCell>
-              <TableCell>Diseño de Software</TableCell>
-              <TableCell>Lu 8-10, Mi 8-10</TableCell>
-              <TableCell className="text-right">GC302</TableCell>
-            </TableRow>
-            <TableRow>
-              <TableCell className="font-medium">IDS-302</TableCell>
-              <TableCell>Diseño de Software</TableCell>
-              <TableCell>Lu 8-10, Mi 8-10</TableCell>
-              <TableCell className="text-right">GC302</TableCell>
-            </TableRow>
-            <TableRow>
-              <TableCell className="font-medium">IDS-302</TableCell>
-              <TableCell>Aseguramiento de la Calidad de Software</TableCell>
-              <TableCell>Lu 8-10, Mi 8-10</TableCell>
-              <TableCell className="text-right">GC302, GC212</TableCell>
-            </TableRow>
-            <TableRow>
-              <TableCell className="font-medium">IDS-302</TableCell>
-              <TableCell>Diseño de Software</TableCell>
-              <TableCell>Lu 8-10, Mi 8-10</TableCell>
-              <TableCell className="text-right">GC302</TableCell>
-            </TableRow>
+            {data.map((item, index) => (
+              <TableRow key={index}>
+                <TableCell className="font-medium">{item.seccion}</TableCell>
+                <TableCell>{item.asignatura}</TableCell>
+                <TableCell>{item.horario}</TableCell>
+                <TableCell className="text-right">{item.curso}</TableCell>
+              </TableRow>
+            ))}
           </TableBody>
         </Table>
       </div>
