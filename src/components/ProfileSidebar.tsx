@@ -1,5 +1,6 @@
 import React from "react";
 import "./ProfileSidebar.css";
+// import user from "./assets/user.json";
 
 const ProfileSidebar: React.FC = () => {
   return (
@@ -9,7 +10,7 @@ const ProfileSidebar: React.FC = () => {
           <img src="public/prof.png" alt="User Profile" />
         </div>
         <h2 className="username">Nombre de Usuario</h2>
-        <p className="institutional-id">ID Institucional: 123456</p>
+        <p className="institutional-id">123456</p>
       </div>
     </div>
   );
