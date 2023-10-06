@@ -28,6 +28,7 @@ const AsignaturasPage: React.FC = () => {
               <TableHead>Asignatura</TableHead>
               <TableHead>Horario</TableHead>
               <TableHead className="text-right">Curso</TableHead>
+              <TableHead>Docente</TableHead>
             </TableRow>
           </TableHeader>
           <TableBody>
@@ -41,6 +42,7 @@ const AsignaturasPage: React.FC = () => {
                   <TableCell>{item.asignatura}</TableCell>
                   <TableCell>{item.horario}</TableCell>
                   <TableCell className="text-right">{item.curso}</TableCell>
+                  <TableCell>{item.docente}</TableCell>
                 </TableRow>
               )
             )}
