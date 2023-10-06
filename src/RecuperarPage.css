@@ -1,0 +1,49 @@
+.centered-element {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* Centra el elemento en el centro de la ventana */
+}
+
+
+.Recuperar-form {
+  max-width: 300px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.Recuperar-form input {
+  margin-bottom: 10px;
+  padding: 10px;
+  font-size: 18px;
+  border-radius: 15px;
+}
+
+.Recuperar-form button {
+  padding: 10px;
+  font-size: 18px;
+  background-color: #3d87ff;
+  color: white;
+  border: none;
+  border-radius: 15px;
+  cursor: pointer;
+}
+
+.Recuperar-form button:hover {
+  background-color: #ebebeb;
+  border: 3px solid #3d87ff;
+  color: #3d87ff;
+}
+
+.Recuperar-form button:active {
+  background-color: #ebebeb;
+  border: 3px solid #004bc4;
+  color: #004bc4;
+}
+
+.Recuperar-contrasena{
+  color: #69a2ff;
+  font-size: 20px;
+}
+
