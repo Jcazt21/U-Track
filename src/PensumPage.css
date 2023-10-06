@@ -1,0 +1,31 @@
+.pdf-container {
+  width: 200%;
+  height: 700px;
+  margin-left: -400px
+
+}
+
+.Pensum-page {
+  display: flex;
+}
+
+.content {
+  padding: 20px;
+  width: 100%;
+  margin-left: 300px; /* Agrega un margen a la izquierda para evitar que el contenido se superponga con el sidebar */
+}
+
+h2 {
+  color: #3d87ff;
+  margin-bottom: 20px;
+}
+
+h3 {
+  color: #333;
+  margin-top: 20px;
+}
+
+p {
+  color: #666;
+  line-height: 1.6;
+}
