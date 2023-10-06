@@ -8,6 +8,7 @@ import AsignaturasPage from "./AsignaturasPage";
 import "./App.css";
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import RecuperarPage from "./RecuperarPage";
+import PensumPage from "./PensumPage";
 
 function App() {
   return (
@@ -34,7 +35,9 @@ function App() {
           <Route path="/SupportPage" element={<SupportPage />} />
           <Route path="/CalificacionesPage" element={<CalificacionesPage />} />
           <Route path="/RecuperarPage" element={<RecuperarPage />} />
+          <Route path="/PensumPage" element={<PensumPage />} />
           <Route path="/AsignaturasPage" element={<AsignaturasPage />} />
+
         </Routes>
       </div>
     </Router>
