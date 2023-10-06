@@ -13,37 +13,43 @@
     },
     {
       "asignatura": "Bases de Datos",
-      "trimestre": "5",
+      "trimestre": "4",
       "calificacion": "85",
       "alpha": "B"
     },
     {
       "asignatura": "Redes de Computadoras",
-      "trimestre": "6",
+      "trimestre": "4",
       "calificacion": "88",
       "alpha": "B+"
     },
     {
       "asignatura": "Inteligencia Artificial",
-      "trimestre": "7",
+      "trimestre": "4",
       "calificacion": "92",
       "alpha": "A-"
     },
     {
       "asignatura": "Desarrollo Web",
-      "trimestre": "5",
+      "trimestre": "4",
       "calificacion": "89",
       "alpha": "B+"
     },
     {
       "asignatura": "Sistemas Operativos",
-      "trimestre": "6",
+      "trimestre": "4",
       "calificacion": "86",
       "alpha": "B"
     },
     {
       "asignatura": "Seguridad Informática",
-      "trimestre": "8",
+      "trimestre": "4",
+      "calificacion": "91",
+      "alpha": "A-"
+    },
+    {
+      "asignatura": "Aseguramiento de la Calidad de Software",
+      "trimestre": "4",
       "calificacion": "91",
       "alpha": "A-"
     }
