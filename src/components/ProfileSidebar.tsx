@@ -1,17 +1,19 @@
 import React from "react";
 import "./ProfileSidebar.css";
-// import user from "./assets/user.json";
+import user from "src/assets/user.json";
 
 const ProfileSidebar: React.FC = () => {
   return (
     <div className="profile-sidebar-container">
-      <div className="profile-sidebar">
-        <div className="profile-picture">
-          <img src="public/prof.png" alt="User Profile" />
+      {user.map((user, index) => (
+        <div className="profile-sidebar" key={index}>
+          <div className="profile-picture">
+            <img src="public/prof.png" alt="User Profile" />
+          </div>
+          <h2 className="username">{user.name}</h2>
+          <p className="institutional-id">{user.id}</p>
         </div>
-        <h2 className="username">Nombre de Usuario</h2>
-        <p className="institutional-id">123456</p>
-      </div>
+      ))}
     </div>
   );
 };
