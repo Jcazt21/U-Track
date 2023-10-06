@@ -1,6 +1,6 @@
 import React from "react";
 import "./ProfileSidebar.css";
-import user from "src/assets/user.json";
+import user from "./user.json";
 
 const ProfileSidebar: React.FC = () => {
   return (
