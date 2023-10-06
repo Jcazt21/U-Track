@@ -24,7 +24,7 @@ const PensumPage: React.FC = () => {
           let reader = new FileReader()
           reader.readAsDataURL(selectedFile)
           reader.onload = (e) => {
-          setPDFFile(e.target.result)
+          // setPDFFile(e.target.result)
           }
         }
         else {
