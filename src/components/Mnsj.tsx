@@ -1,5 +1,6 @@
 import { FunctionComponent } from "react";
 import styles from "./Mnsj.module.css";
+import user from "./user.json";
 
 const Mnsj: FunctionComponent = () => {
   return (
@@ -8,7 +9,7 @@ const Mnsj: FunctionComponent = () => {
         “La educación es el arma más poderosa que puedes usar para cambiar el
         mundo.”
       </div>
-      <h1 className={styles.txtMnsjestudiante}>Buen dia estudiante!</h1>
+      <h1 className={styles.txtMnsjestudiante}>Buen día {user[0].name}!</h1>
     </div>
   );
 };

@@ -31,20 +31,19 @@ const RecuperarPage: React.FC = () => {
     <div className="container">
       <div className="centered-element">
         <form onSubmit={handleSubmit} className="Recuperar-form">
-
           <img src="public/logo.png" alt="Logo" className="logo-picture" />
-          <h2 className="Recuperar-Contrasena">Recuperar_Contrasena</h2>
+          <h2 className="Recuperar-Contrasena">Recuperar Contraseña</h2>
           <input
             type="text"
             placeholder="Ingrear ID"
             value={username}
             onChange={(e) => setUsername(e.target.value)}
           />
-      
+
           <button type="submit">Recuperar</button>
         </form>
       </div>
-    </div>  
+    </div>
   );
 };
 
