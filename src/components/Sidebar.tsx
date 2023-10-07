@@ -23,7 +23,7 @@ const Sidebar: React.FC = () => {
           <li>
             <Link to="/CalificacionesPage">
               {" "}
-              <i className="fas fa-star"></i> Ver Calificaciones
+              <i className="fas fa-star"></i> Calificaciones
             </Link>
           </li>
           <li>
@@ -34,7 +34,7 @@ const Sidebar: React.FC = () => {
             </Link>
           </li>
           <li>
-            <Link to="/pensum">
+            <Link to="/PensumPage">
               {" "}
               {/* Cambia <a> por <Link> y href por to */}
               <i className="fas fa-clipboard-list"></i> Visualizar Pensum
