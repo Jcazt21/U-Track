@@ -10,10 +10,11 @@
 .pdf-container {
   width: 100%;
   height: 80vh; /* Ajusta la altura según tus necesidades */
+  left: -420px;
 }
 
-/* .VPensum {
+ .VPensum {
   position: absolute;
   top: 12px;
   left: 420px;
-} */
+} 
