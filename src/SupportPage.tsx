@@ -1,6 +1,7 @@
 import React from "react";
-import Sidebar from "./components/Sidebar"; // Asegúrate de importar el componente Sidebar correctamente
-import "./SupportPage.css"; // Puedes crear un archivo CSS específico para esta página si es necesario
+import { Link } from "react-router-dom"; // Importa el componente Link
+import Sidebar from "./components/Sidebar";
+import "./SupportPage.css";
 
 const SupportPage: React.FC = () => {
   return (
@@ -11,8 +12,9 @@ const SupportPage: React.FC = () => {
 
         <h3>¿Olvidaste tu contraseña?</h3>
         <p>
-          Si olvidaste tu contraseña, haz clic en "Recuperar Contraseña" en la
-          página de inicio de sesión y sigue los pasos para recuperarla.
+          Si olvidaste tu contraseña, haz clic en{" "}
+          <Link to="/RecuperarPage">"Recuperar Contraseña"</Link> en la página
+          de inicio de sesión y sigue los pasos para recuperarla.
         </p>
 
         <h3>Contáctanos</h3>
