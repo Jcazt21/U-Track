@@ -34,7 +34,7 @@ const Sidebar: React.FC = () => {
             </Link>
           </li>
           <li>
-            <Link to="/pensum">
+            <Link to="/PensumPage">
               {" "}
               {/* Cambia <a> por <Link> y href por to */}
               <i className="fas fa-clipboard-list"></i> Visualizar Pensum
