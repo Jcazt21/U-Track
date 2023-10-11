@@ -1,0 +1,94 @@
+/* Código antiguo */
+.home-page {
+    display: flex;
+}
+
+/* ... restantes estilos antiguos... */
+
+/* Nuevos estilos CSS */
+
+/* Estilos para el formulario y los controles de entrada */
+.form-container {
+  margin-top: 10px;
+  max-width: none;  /* Aquí se ha ajustado el max-width */
+  width: 240%;       /* Aquí se ha ajustado el width */
+  background-color: #f2f2f2;
+  padding: 20px;
+  border-radius: 10px;
+  right:auto;
+}
+
+.form-group {
+  margin-bottom: 10px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.form-group input,
+.form-group select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+button[type="submit"] {
+  padding: 10px 20px;
+  background-color: #3d87ff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button[type="submit"]:hover {
+  background-color: #335bb5;
+}
+
+/* Estilos para la nueva sección de Modificar Usuario */
+.modify-user-section {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background-color: #f2f2f2;
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 400px;
+}
+
+.modify-user-section h2 {
+  margin-bottom: 20px;
+}
+
+.modify-user-section input {
+  width: calc(100% - 20px); 
+  padding: 10px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  box-sizing: border-box;
+}
+
+.modify-button {
+  padding: 10px 20px;
+  background-color: #3d87ff;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.modify-button:hover {
+  background-color: #335bb5;
+}
+
+.checkbox-container {
+  display: flex;
+  align-items: center;
+}
+
+.checkbox-container input[type="checkbox"] {
+  margin-right: 10px;
+}

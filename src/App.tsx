@@ -14,6 +14,8 @@ import ProfilePageProfe from "./ProfilePageProfe";
 import HomePageAdmin from "./HomePageAdmin";
 import ProfileAdminPage from "./ProfileAdminPage";
 import ModificarUsuarioEst from "./ModificarUsuarioEst";
+import CrearUsuarioEst from "./CrearUsuarioEst";
+import ModificarAsignaturaAdmin from "./ModificarAsignaturaAdmin";
 
 function App() {
   return (
@@ -47,7 +49,8 @@ function App() {
           <Route path="/HomePageAdmin" element={<HomePageAdmin />} />
           <Route path="/ProfileAdminPage" element={<ProfileAdminPage />} />
           <Route path="/ModificarUsuarioEst" element={<ModificarUsuarioEst />} />
-
+          <Route path="/CrearUsuarioEst" element={<CrearUsuarioEst />} />
+          <Route path="/ModificarAsignaturaAdmin" element={<ModificarAsignaturaAdmin />} />
 
         </Routes>
       </div>

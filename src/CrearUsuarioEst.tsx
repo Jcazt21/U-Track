@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import Sidebar from "./components/SidebarAdmin";
-import "./ModificarUsuarioEst.css";
+import "./CrearUsuarioEst.css";
 
 interface FormData {
   usuario: string | '';
@@ -13,7 +13,7 @@ interface FormData {
   imagen: string;  // Agrega estado para la imagen
 }
 
-const ModificarUsuarioEst: React.FC = () => {
+const CrearUsuarioEst: React.FC = () => {
   const [formData, setFormData] = useState<FormData>({
     usuario: '',
     contrasena: '',
@@ -36,16 +36,8 @@ const ModificarUsuarioEst: React.FC = () => {
     <div className="home-page">
       <Sidebar />
 
-            {/* Nueva sección para modificar usuario */}
-            <div className="modify-user-section">
-        <h2>Modificar Usuario</h2>
-        <input 
-          type="text" 
-          placeholder="Introduce ID de usuario" 
-        />
-        <button className="modify-button">Modificar</button>
-      </div>
-
+      {/* Nueva sección para modificar usuario */}
+      
       <div className="Mensaje">
         <form className="form-container">
           <div className="form-group">
@@ -155,4 +147,4 @@ const ModificarUsuarioEst: React.FC = () => {
   );
 };
 
-export default ModificarUsuarioEst;
+export default CrearUsuarioEst;
