@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Link } from "react-router-dom"; // Importa Link de react-router-dom
 import "./Sidebar.css";
 import SidebarAdmin2 from './SidebarAdmin2';
+import SidebarAdmin3 from './SidebarAdmin3';
 
 
   function SidebarAdmin() {
@@ -36,16 +37,19 @@ import SidebarAdmin2 from './SidebarAdmin2';
               {/* Cambia <a> por <Link> y href por to */}
               <i className="fas fa-clipboard-list">Gestionar Usuarios</i>
               <a onClick={toggleSidebar}>
-              {isOpen && <SidebarAdmin2 />}
+              {isOpen && <SidebarAdmin2/>}
               </a>
               </a>
             </li>
             <li>
-              <Link to="/AsignaturasPage">
-                {" "}
-                {/* Cambia <a> por <Link> y href por to */}
-                <i className="fas fa-book"></i>  Gestionar Asignaturas
-              </Link>
+              <a className='list-unstyled'>
+              {" "}
+              {/* Cambia <a> por <Link> y href por to */}
+              <i className="fas fa-clipboard-list">Gestionar Asignatura</i>
+              <a onClick={toggleSidebar}>
+              {isOpen && <SidebarAdmin3 />}
+              </a>
+              </a>
             </li>
           </ul>
           <Link to="/">
