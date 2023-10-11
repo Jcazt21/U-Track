@@ -1,0 +1,105 @@
+/* Estilos para el sidebar principal */
+.sidebar-container {
+    font-family: "Lato", sans-serif;
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 939px;
+    width: max-content;
+    background-color: #ebebeb;
+    z-index: 1000;
+    box-shadow: 1px 0 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .sidebar {
+    height: 95%;
+    width: 370px;
+    padding: 20px;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+  
+  .sidebar-title {
+    margin-bottom: 20px;
+    font-size: 32px;
+    color: #3d87ff;
+  }
+  
+  .list-unstyled {
+    padding: 0;
+    margin: 0;
+    height: 80%;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+  
+  .list-unstyled li {
+    list-style-type: none;
+    margin-bottom: 10px;
+  }
+  
+  .list-unstyled li a {
+    color: #333;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    font-size: 24px;
+  }
+  
+  .list-unstyled li a:hover {
+    color: #3d87ff;
+    background-color: #d9d9d9;
+    font-weight: bold;
+  }
+  
+  .logout {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 18px;
+    color: #e81123;
+    background-color: #dbdbdb;
+    border: 3px solid #e81123;
+    border-radius: 15px;
+    cursor: pointer;
+    align-self: center;
+    width: 300px;
+  }
+  
+  .logout:hover {
+    background-color: #e81123;
+    color: #ebebeb;
+  }
+  
+  .logout:active {
+    background-color: #a81522;
+    color: white;
+  }
+  
+  /* Estilos para el sidebar secundario */
+  .sidebar.secondary {
+    width: 370px;
+    height: 939px;
+    background-color: #ccc;
+    z-index: 999;
+    box-shadow: 1px 0 5px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+  }
+  
+  .sidebar.secondary .list-unstyled li a {
+    color: #333;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    font-size: 24px;
+  }
+  
+  .sidebar.secondary .list-unstyled li a:hover {
+    color: #3d87ff;
+    background-color: #d9d9d9;
+    font-weight: bold;
+  }
+  

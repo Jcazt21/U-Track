@@ -13,6 +13,7 @@ import HomePageProfe from "./HomePageProfe";
 import ProfilePageProfe from "./ProfilePageProfe";
 import HomePageAdmin from "./HomePageAdmin";
 import ProfileAdminPage from "./ProfileAdminPage";
+import ModificarUsuarioEst from "./ModificarUsuarioEst";
 
 function App() {
   return (
@@ -45,6 +46,7 @@ function App() {
           <Route path="/ProfilePageProfe" element={<ProfilePageProfe />} />
           <Route path="/HomePageAdmin" element={<HomePageAdmin />} />
           <Route path="/ProfileAdminPage" element={<ProfileAdminPage />} />
+          <Route path="/ModificarUsuarioEst" element={<ModificarUsuarioEst />} />
 
 
         </Routes>
