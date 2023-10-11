@@ -10,6 +10,7 @@ import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import RecuperarPage from "./RecuperarPage";
 import PensumPage from "./PensumPage";
 import HomePageProfe from "./HomePageProfe";
+import ProfilePageProfe from "./ProfilePageProfe";
 
 function App() {
   return (
@@ -39,6 +40,7 @@ function App() {
           <Route path="/PensumPage" element={<PensumPage />} />
           <Route path="/AsignaturasPage" element={<AsignaturasPage />} />
           <Route path="/HomePageProfe" element={<HomePageProfe />} />
+          <Route path="/ProfilePageProfe" element={<ProfilePageProfe />} />
 
         </Routes>
       </div>
