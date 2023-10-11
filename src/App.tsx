@@ -11,6 +11,7 @@ import RecuperarPage from "./RecuperarPage";
 import PensumPage from "./PensumPage";
 import HomePageProfe from "./HomePageProfe";
 import ProfilePageProfe from "./ProfilePageProfe";
+import GestionAsignaturaPage from "./GestionAsignaturaPage";
 
 function App() {
   return (
@@ -41,6 +42,7 @@ function App() {
           <Route path="/AsignaturasPage" element={<AsignaturasPage />} />
           <Route path="/HomePageProfe" element={<HomePageProfe />} />
           <Route path="/ProfilePageProfe" element={<ProfilePageProfe />} />
+          <Route path="/GestionAsignaturaPage" element={<GestionAsignaturaPage />} />
 
         </Routes>
       </div>

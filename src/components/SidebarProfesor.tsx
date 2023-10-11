@@ -9,19 +9,19 @@ const Sidebar: React.FC = () => {
         <h2 className="sidebar-title">U-Track</h2>
         <ul className="list-unstyled">
           <li>
-            <Link to="/HomePage">
+            <Link to="/HomePageProfe">
               {" "}
               {/* Cambia <a> por <Link> y href por to */}
               <i className="fas fa-home"></i> Panel
             </Link>
           </li>
           <li>
-            <Link to="/ProfilePage">
+            <Link to="/ProfilePageProfe">
               <i className="fas fa-user"></i> Perfil
             </Link>
           </li>
           <li>
-            <Link to="/AsignaturasPage">
+            <Link to="/GestionAsignaturaPage">
               {" "}
               {/* Cambia <a> por <Link> y href por to */}
               <i className="fas fa-book"></i> Gestionar Calificaciones
