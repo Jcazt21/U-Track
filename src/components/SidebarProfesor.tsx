@@ -27,13 +27,6 @@ const Sidebar: React.FC = () => {
               <i className="fas fa-book"></i> Gestionar Calificaciones
             </Link>
           </li>
-          <li>
-            <Link to="/PensumPage">
-              {" "}
-              {/* Cambia <a> por <Link> y href por to */}
-              <i className="fas fa-clipboard-list"></i> Oferta Academica
-            </Link>
-          </li>
         </ul>
         <Link to="/">
           {" "}
