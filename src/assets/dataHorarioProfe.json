@@ -1,0 +1,36 @@
+[
+    {
+      "seccion": "IDS302L-01",
+      "asignatura": "Diseño de Software",
+      "Departamento": "Ingenieria en Software",
+      "horario": "Ma/Ju 8-10",
+      "curso": "GC302",
+      "Estudiantes": "27"
+    },
+    {
+      "seccion": "IDS302L-01",
+      "asignatura": "Diseño de Software",
+      "Departamento": "Lab. Ingenieria en Software",
+      "horario": "Vi 8-10",
+      "curso": "FD412",
+      "Estudiantes": "29"
+    },
+    {
+      "seccion": "IDS345-02",
+      "asignatura": "Desarrollo de Software III",
+      "Departamento": "Ingenieria en Software",
+      "horario": "Mi 6-10",
+      "curso": "AJ302",
+      "Estudiantes": "31"
+    },
+    {
+      "seccion": "IDS345L-02",
+      "asignatura": "Desarrollo de Software III",
+      "Departamento": "Ingenieria en Software",
+      "horario": "Ju 6-8",
+      "curso": "GC212",
+      "Estudiantes": "33"
+    }
+    
+  ]
+  

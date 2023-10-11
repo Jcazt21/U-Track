@@ -1,0 +1,28 @@
+.txtFrase {
+  position: absolute;
+  top: 95px;
+  left: 43px;
+  font-weight: 500;
+  display: inline-block;
+  width: 800px;
+}
+.txtMnsjProfesor {
+  margin: 0;
+  position: absolute;
+  top: 31px;
+  left: 47px;
+  font-size: 40px;
+  font-weight: 700;
+  font-family: inherit;
+  color: #3d87ff;
+}
+.mnsj {
+  border-radius: 15px;
+  background-color: rgba(209, 235, 255, 0.7);
+  width: 1000px;
+  height: 180px;
+  text-align: left;
+  font-size: 20px;
+  color: #000;
+  font-family: var(--font-lato);
+}

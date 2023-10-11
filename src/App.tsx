@@ -9,6 +9,7 @@ import "./App.css";
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import RecuperarPage from "./RecuperarPage";
 import PensumPage from "./PensumPage";
+import HomePageProfe from "./HomePageProfe";
 
 function App() {
   return (
@@ -37,6 +38,7 @@ function App() {
           <Route path="/RecuperarPage" element={<RecuperarPage />} />
           <Route path="/PensumPage" element={<PensumPage />} />
           <Route path="/AsignaturasPage" element={<AsignaturasPage />} />
+          <Route path="/HomePageProfe" element={<HomePageProfe />} />
 
         </Routes>
       </div>
