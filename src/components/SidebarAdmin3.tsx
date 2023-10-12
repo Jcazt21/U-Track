@@ -9,14 +9,14 @@ const SidebarAdmin3: React.FC = () => {
       <div className="sidebar">
         <ul className="list-unstyled">
           <li>
-            <Link to="/ModificarAsignaturaPage">
+            <Link to="/CrearAsignaturaAdmin">
               {" "}
               {/* Cambia <a> por <Link> y href por to */}
               <i className="fas fa-book"></i> Crear Asignatura
             </Link>
           </li>
           <li>
-            <Link to="/ModificarUsuarioProfe">
+            <Link to="/ModificarAsignaturaAdmin">
               {" "}
               {/* Cambia <a> por <Link> y href por to */}
               <i className="fas fa-book"></i> Modificar Asignatura
