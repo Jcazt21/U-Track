@@ -7,20 +7,22 @@ interface FormData {
   nombre: string;
   contrasena: string;
   apellido: string;
-  carrera: string;
+  departamento: string;
   mail: string;
+  carrera: string;
   activo: boolean;  // Agregar estado para activo
   imagen: string;  // Agrega estado para la imagen
 }
 
-const ModificarUsuarioEst: React.FC = () => {
+const ModificarUsuarioProfe: React.FC = () => {
   const [formData, setFormData] = useState<FormData>({
     usuario: '',
     contrasena: '',
     nombre: '',
     apellido: '',
-    carrera: '',
+    departamento: '',
     mail: '',
+    carrera: '',
     activo: false,
     imagen: '',
   });
@@ -38,7 +40,7 @@ const ModificarUsuarioEst: React.FC = () => {
 
             {/* Nueva sección para modificar usuario */}
             <div className="modify-user-section">
-        <h2>Modificar Estudiante</h2>
+        <h2>Modificar Profesor</h2>
         <input 
           type="text" 
           placeholder="Introduce ID de usuario" 
@@ -97,15 +99,15 @@ const ModificarUsuarioEst: React.FC = () => {
           </div>
 
           <div className="form-group">
-            <label htmlFor="carrera">Carrera:</label>
+            <label htmlFor="departamento">Departamento:</label>
             <select 
-              id="carrera" 
-              name="carrera" 
-              value={formData.carrera}
+              id="departamento" 
+              name="departamento" 
+              value={formData.departamento}
               onChange={handleChange as any}
               required
             >
-              <option value="">Seleccione una carrera</option>
+              <option value="">Seleccione un departamento</option>
               <option value="ingenieria">Ingeniería</option>
               <option value="medicina">Ciencias Básicas y Ambientales</option>
               <option value="derecho">Ciencias Sociales y Humanidades</option>
@@ -114,11 +116,23 @@ const ModificarUsuarioEst: React.FC = () => {
           </div>
 
           <div className="form-group">
-            <label htmlFor="apellido">Mail</label>
+            <label htmlFor="Mail">Mail</label>
             <input
               type="text"
-              id="apellido"
-              name="apellido"
+              id="Mail"
+              name="Mail"
+              value={formData.apellido}
+              onChange={handleChange}
+              required
+            />
+          </div>
+
+          <div className="form-group">
+            <label htmlFor="Carrera">Carrera</label>
+            <input
+              type="text"
+              id="Carrera"
+              name="Carrera"
               value={formData.apellido}
               onChange={handleChange}
               required
@@ -147,7 +161,7 @@ const ModificarUsuarioEst: React.FC = () => {
             />
           </div>
 
-          <button type="submit">Guardar</button>
+          <button type="submit">Modificar</button>
         </form>
       </div>
       {/* Puedes agregar tu componente Table aquí */}
@@ -155,4 +169,4 @@ const ModificarUsuarioEst: React.FC = () => {
   );
 };
 
-export default ModificarUsuarioEst;
+export default ModificarUsuarioProfe;

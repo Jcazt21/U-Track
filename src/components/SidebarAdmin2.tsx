@@ -9,22 +9,29 @@ const SidebarAdmin2: React.FC = () => {
       <div className="sidebar">
         <ul className="list-unstyled">
           <li>
-            <Link to="/HomePageAdmin">
+            <Link to="/CrearUsuarioEst">
               {" "}
               {/* Cambia <a> por <Link> y href por to */}
-              <i className="fas fa-home"></i> Crear Estuadiante
+              <i className="fas fa-user"></i> Crear Estuadiante
             </Link>
           </li>
           <li>
-            <Link to="/ProfileAdminPage">
+            <Link to="/CrearUsuarioEst">
               <i className="fas fa-user"></i> Crear Profesor
             </Link>
           </li>
           <li>
-            <Link to="/AsignaturasPage">
+            <Link to="/ModificarUsuarioEst">
               {" "}
               {/* Cambia <a> por <Link> y href por to */}
-              <i className="fas fa-book"></i> Modificar Perfil
+              <i className="fas fa-book"></i> Modificar Estudiante
+            </Link>
+          </li>
+          <li>
+            <Link to="/ModificarUsuarioProfe">
+              {" "}
+              {/* Cambia <a> por <Link> y href por to */}
+              <i className="fas fa-book"></i> Modificar Profesor
             </Link>
           </li>
         </ul>
