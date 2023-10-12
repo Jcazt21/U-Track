@@ -16,7 +16,7 @@ import ProfileAdminPage from "./ProfileAdminPage";
 import ModificarUsuarioEst from "./ModificarUsuarioEst";
 import CrearUsuarioEst from "./CrearUsuarioEst";
 import ModificarAsignaturaAdmin from "./ModificarAsignaturaAdmin";
-import CrearAsignaturaAdmin from "./CrearAsignaturaAdmin";
+import ModificarUsuarioProfe from "./ModificarUsuarioProfe";
 
 function App() {
   return (
@@ -49,10 +49,13 @@ function App() {
           <Route path="/ProfilePageProfe" element={<ProfilePageProfe />} />
           <Route path="/HomePageAdmin" element={<HomePageAdmin />} />
           <Route path="/ProfileAdminPage" element={<ProfileAdminPage />} />
-          <Route path="/ModificarUsuarioEst" element={<ModificarUsuarioEst />} />
+          <Route
+            path="/ModificarUsuarioEst"
+            element={<ModificarUsuarioEst />}
+          />
           <Route path="/CrearUsuarioEst" element={<CrearUsuarioEst />} />
           <Route path="/ModificarAsignaturaAdmin" element={<ModificarAsignaturaAdmin />} />
-          <Route path="/CrearAsignaturaAdmin" element={<CrearAsignaturaAdmin />} />
+          <Route path="/ModificarUsuarioProfe" element={<ModificarUsuarioProfe />} />
 
         </Routes>
       </div>

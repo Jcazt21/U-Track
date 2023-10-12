@@ -4,9 +4,9 @@
         "nombre": "Jean Azar",
         "usuarioId": 1104992,
         "password": "1234",
-        "carreraId": 1,
+        "carreraId": "IDS",
         "rol": "Estudiante",
-        "indice": 3.30,
+        "indice": 3.90,
         "materias": [
           {
             "seccion": "IDS-302",
