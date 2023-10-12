@@ -1,0 +1,16 @@
+{
+    "administradores": [
+      {
+        "id": 1,
+        "nombre": "Ana",
+        "apellido": "García",
+        "usuarioId": 6,
+        "email": "ana@ejemplo.com",
+        "password": "contraseña789",
+        "imagen": "url/de/la/imagen",
+        "activo": true,
+        "departamentoId": 1
+      }
+    ]
+  }
+  

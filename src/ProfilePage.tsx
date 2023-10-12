@@ -1,22 +1,52 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import Sidebar from "./components/Sidebar";
 import "./ProfilePage.css";
-import users from "./components/user.json"; // Asegúrate de que la ruta al archivo JSON es correcta
+import estudiantes from "./components/estudiantes.json";
+
+interface Estudiante {
+  nombre: string;
+  usuarioId: number;
+  carreraId: number;
+  rol: string;
+  indice: number;
+  imagen?: string;
+  // Agrega aquí otros campos según sea necesario
+}
 
 const ProfilePage: React.FC = () => {
-  const user = users[0]; // Esto asume que quieres mostrar el primer usuario en el array. Ajusta según sea necesario.
+  const [estudiante, setEstudiante] = useState<Estudiante | null>(null);
+
+  useEffect(() => {
+    const usuarioId = localStorage.getItem("usuarioId");
+
+    if (usuarioId) {
+      const est = estudiantes.estudiantes.find(
+        (est) => est.usuarioId.toString() === usuarioId
+      );
+
+      if (est) {
+        setEstudiante(est);
+      }
+    }
+  }, []);
+
+  if (!estudiante) return <div>Cargando...</div>;
 
   return (
     <div className="profile-container">
       <div className="profile-info">
-        <img src="public/prof.png" alt="Profile" className="profile-picture" />
-        <h2 className="name">{user.name}</h2>{" "}
-        <p className="id">ID: {user.id}</p>{" "}
-        <p className="career">Carrera: {user.career}</p>{" "}
-        <p className="rol">{user.rol}</p>{" "}
+        <img
+          src={estudiante?.imagen || "public/prof.png"}
+          alt="Profile"
+          className="profile-picture"
+        />
+        <h2 className="name">{estudiante.nombre}</h2>
+        <p className="id">ID: {estudiante.usuarioId}</p>
+        <p className="career">Carrera: {estudiante.carreraId}</p>
+        <p className="rol">{estudiante.rol}</p>
         <p className="IndiceLabel">Indice Academico:</p>
-        <p className="indiceP">{user.indice}</p>
+        <p className="indiceP">{estudiante.indice}</p>
       </div>
       <Link to="/SupportPage" className="soporte-link">
         <h3 className="soporte">Soporte</h3>

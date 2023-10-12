@@ -1,0 +1,18 @@
+{
+    "profesores": [
+      {
+        "id": 1,
+        "nombre": "Juan",
+        "apellido": "Pérez",
+        "departamentoId": 1,
+        "email": "juan@ejemplo.com",
+        "password": "contraseña456",
+        "carrera": "Ingeniería",
+        "usuarioId": 5,
+        "imagen": "url/de/la/imagen",
+        "activo": true,
+        "secciones": [1, 2]
+      }
+    ]
+  }
+  

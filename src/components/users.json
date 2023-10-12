@@ -1,0 +1,30 @@
+[
+    {
+      "name": "Jean Azar",
+      "id": "1104992",
+      "password": "1234",
+      "career": "IDS",
+      "rol": "Estudiante",
+      "indice": "3.67"
+    },
+    {
+      "name": "Guille",
+      "id": "1105050",
+      "password": "1234",
+      "career": "IDS",
+      "rol": "Estudiante",
+      "indice": "3.50"
+    },
+    {
+      "name": "Gustav",
+      "id": "admin",
+      "password": "admin",
+      "rol": "admin"
+    },
+    {
+      "name": "Profe1",
+      "id": "1104993",
+      "password": "1234",
+      "rol": "profesor"
+    }
+  ]

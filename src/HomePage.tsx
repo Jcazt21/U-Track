@@ -3,7 +3,7 @@ import Sidebar from "./components/Sidebar";
 import ProfileSidebar from "./components/ProfileSidebar";
 import Mnsj from "./components/Mnsj";
 import "./HomePage.css";
-import data from "./assets/data.json"; // importamos el json con su ruta
+import estudiantes from "./components/estudiantes.json"; // Importa el archivo JSON de estudiantes
 import {
   Table,
   TableBody,
@@ -15,39 +15,40 @@ import {
 } from "@/components/ui/table";
 
 const HomePage: React.FC = () => {
+  // Asumiendo que quieres acceder al primer estudiante en el array
+  const estudiante = estudiantes.estudiantes[0];
+  const { nombre, indice, materias } = estudiante;
+
   return (
     <div className="home-page">
       <Sidebar />
       <ProfileSidebar />
-      <h1 className="title">Panel Estundiantil</h1>
-      <h2 className="titleTable">Horario</h2>
+      <h1 className="title">Panel Estudiantil</h1>{" "}
       <div className="Mensaje">
         <Mnsj />
       </div>
+      <h2 className="titleTable">Horario</h2>
       <div className="Table">
         <Table>
           <TableHeader>
             <TableRow>
-              <TableHead className="font-medium">Seccion</TableHead>
+              <TableHead className="font-medium">Sección</TableHead>
               <TableHead>Asignatura</TableHead>
               <TableHead>Horario</TableHead>
               <TableHead className="text-right">Curso</TableHead>
+              <TableHead>Docente</TableHead>
             </TableRow>
           </TableHeader>
           <TableBody>
-            {data.map(
-              (
-                item,
-                index // declaramos el data.map para que funncione el json.
-              ) => (
-                <TableRow key={index}>
-                  <TableCell className="font-medium">{item.seccion}</TableCell>
-                  <TableCell>{item.asignatura}</TableCell>
-                  <TableCell>{item.horario}</TableCell>
-                  <TableCell className="text-right">{item.curso}</TableCell>
-                </TableRow>
-              )
-            )}
+            {materias.map((materia, index) => (
+              <TableRow key={index}>
+                <TableCell className="font-medium">{materia.seccion}</TableCell>
+                <TableCell>{materia.asignatura}</TableCell>
+                <TableCell>{materia.horario}</TableCell>
+                <TableCell className="text-right">{materia.curso}</TableCell>
+                <TableCell>{materia.docente}</TableCell>
+              </TableRow>
+            ))}
           </TableBody>
         </Table>
       </div>

@@ -1,30 +1,47 @@
 import React, { useState } from "react";
-import axios from "axios";
-import { useNavigate, Link } from "react-router-dom"; // Importa Link
+import { useNavigate, Link } from "react-router-dom";
 import "./LoginForm.css";
+import estudiantes from "./estudiantes.json";
+import profesores from "./profesores.json";
+import administradores from "./administradores.json";
 
 const LoginForm: React.FC = () => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const navigate = useNavigate();
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
 
-    try {
-      const response = await axios.post("http://localhost:8000/login/", {
-        username,
-        password,
-      });
+    // Concatenar todos los usuarios en un solo array
+    const allUsers = [
+      ...estudiantes.estudiantes,
+      ...profesores.profesores,
+      ...administradores.administradores,
+    ];
 
-      if (response.data && response.data.access) {
-        localStorage.setItem("token", response.data.access);
+    // Buscar el usuario en el array basado en el ID y la contraseña
+    const user = allUsers.find(
+      (user) =>
+        user.usuarioId.toString() === username && user.password === password
+    );
+
+    if (user) {
+      // Guardar el usuarioId en el localStorage
+      localStorage.setItem("usuarioId", user.usuarioId.toString());
+
+      // Navegar basado en el tipo de usuario
+      if ("carreraId" in user) {
         navigate("/HomePage");
+      } else if ("departamentoId" in user && "carrera" in user) {
+        navigate("/HomePageProfe");
+      } else if ("departamentoId" in user) {
+        navigate("/HomePageAdmin");
       } else {
-        console.error("Error en la autenticación");
+        console.error("Tipo de usuario no reconocido");
       }
-    } catch (error) {
-      console.error("Error en la solicitud de inicio sesion", error);
+    } else {
+      console.error("Error en la autenticación");
     }
   };
 
@@ -45,7 +62,7 @@ const LoginForm: React.FC = () => {
       <button type="submit">Iniciar Sesion</button>
       <Link to="/RecuperarPage" className="recover-password-link">
         Recuperar Contraseña
-      </Link>{" "}
+      </Link>
     </form>
   );
 };
