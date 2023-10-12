@@ -1,47 +1,45 @@
 import React, { useState } from "react";
 import { useNavigate, Link } from "react-router-dom";
+import axios from 'axios';  // Importa Axios
 import "./LoginForm.css";
-import estudiantes from "./estudiantes.json";
-import profesores from "./profesores.json";
-import administradores from "./administradores.json";
 
 const LoginForm: React.FC = () => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const navigate = useNavigate();
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
 
-    // Concatenar todos los usuarios en un solo array
-    const allUsers = [
-      ...estudiantes.estudiantes,
-      ...profesores.profesores,
-      ...administradores.administradores,
-    ];
+    try {
+      // Hacer una solicitud POST al endpoint de autenticación
+      const response = await axios.post('http://127.0.0.1:8000/token/', {  // Asegúrate de usar la URL correcta para tu endpoint
+        username: username,
+        password: password,
+      });
 
-    // Buscar el usuario en el array basado en el ID y la contraseña
-    const user = allUsers.find(
-      (user) =>
-        user.usuarioId.toString() === username && user.password === password
-    );
+      if (response.data.access) {
+        localStorage.setItem('accessToken', response.data.access);
 
-    if (user) {
-      // Guardar el usuarioId en el localStorage
-      localStorage.setItem("usuarioId", user.usuarioId.toString());
-
-      // Navegar basado en el tipo de usuario
-      if ("carreraId" in user) {
-        navigate("/HomePage");
-      } else if ("departamentoId" in user && "carrera" in user) {
-        navigate("/HomePageProfe");
-      } else if ("departamentoId" in user) {
-        navigate("/HomePageAdmin");
+        // Redirige basado en el tipo de usuario
+        switch(response.data.user_type) {
+          case 'estudiante':
+            navigate('/HomePage');
+            break;
+          case 'profesor':
+            navigate('/HomePageProfe');
+            break;
+          case 'administrador':
+            navigate('/HomePageAdmin');
+            break;
+          default:
+            console.error('Tipo de usuario desconocido');
+        }
       } else {
-        console.error("Tipo de usuario no reconocido");
+        console.error('Error en la autenticación');
       }
-    } else {
-      console.error("Error en la autenticación");
+    } catch (error) {
+      console.error('Error en la autenticación', error);
     }
   };
 
