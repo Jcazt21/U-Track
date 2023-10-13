@@ -17,6 +17,8 @@ import ModificarUsuarioEst from "./ModificarUsuarioEst";
 import CrearUsuarioEst from "./CrearUsuarioEst";
 import ModificarAsignaturaAdmin from "./ModificarAsignaturaAdmin";
 import ModificarUsuarioProfe from "./ModificarUsuarioProfe";
+import CrearAsignaturaAdmin from "./CrearAsignaturaAdmin";
+import CrearUsuarioProfesor from "./CrearUsuarioProfesor";
 
 function App() {
   return (
@@ -56,6 +58,9 @@ function App() {
           <Route path="/CrearUsuarioEst" element={<CrearUsuarioEst />} />
           <Route path="/ModificarAsignaturaAdmin" element={<ModificarAsignaturaAdmin />} />
           <Route path="/ModificarUsuarioProfe" element={<ModificarUsuarioProfe />} />
+          <Route path="/CrearAsignaturaAdmin" element={<CrearAsignaturaAdmin />} />
+          <Route path="/CrearUsuarioProfesor" element={<CrearUsuarioProfesor />} />
+          
 
         </Routes>
       </div>
