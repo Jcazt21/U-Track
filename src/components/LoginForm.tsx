@@ -21,6 +21,13 @@ const LoginForm: React.FC = () => {
       if (response.data.access) {
         localStorage.setItem('accessToken', response.data.access);
 
+            // Guardar user_info en el localStorage
+      // Guardar user_info en el localStorage
+      if (response.data.user_info) {
+        localStorage.setItem('userInfo', JSON.stringify(response.data.user_info));
+      }
+
+      
         // Redirige basado en el tipo de usuario
         switch(response.data.user_type) {
           case 'estudiante':
@@ -34,6 +41,7 @@ const LoginForm: React.FC = () => {
             break;
           default:
             console.error('Tipo de usuario desconocido');
+
         }
       } else {
         console.error('Error en la autenticación');
@@ -42,6 +50,10 @@ const LoginForm: React.FC = () => {
       console.error('Error en la autenticación', error);
     }
   };
+
+
+  const userInfo = JSON.parse(localStorage.getItem('userInfo') || '{}');
+  console.log(userInfo);  // Imprimir la información del usuario en la consola
 
   return (
     <form onSubmit={handleSubmit} className="login-form">
