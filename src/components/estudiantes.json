@@ -37,6 +37,72 @@
             ]
           }
         ]
+      },
+      {
+        "nombre": "Agner Diaz",
+        "usuarioId": 1108124,
+        "password": "1234",
+        "carreraId": 1,
+        "rol": "Estudiante",
+        "indice": 3.70,
+        "materias": [
+          {
+            "seccion": "IDS-325",
+            "asignatura": "Aseguramiento de la Calidad de Software",
+            "horario": "Ma/Mi 12-14",
+            "curso": "GC302, GC212",
+            "docente": "Francia Mejía",
+            "calificaciones": [
+              {
+                "trimestre": "8",
+                "calificacion": "87",
+                "alpha": "B+"
+              }
+            ]
+          },
+          {
+            "seccion": "IDS-325L",
+            "asignatura": "Laboratorio Aseguramiento de la Calidad de Software",
+            "horario": "Vi 15-18",
+            "curso": "FD412",
+            "docente": "Francia Mejía",
+            "calificaciones": [
+              {
+                "trimestre": "8",
+                "calificacion": "90",
+                "alpha": "A"
+              }
+            ]
+          },
+          {
+            "seccion": "ICS-202",
+            "asignatura": "Algoritmo Maliciosos",
+            "horario": "Sa 7-11",
+            "curso": "GC312",
+            "docente": "Isaias Mercado",
+            "calificaciones": [
+              {
+                "trimestre": "8",
+                "calificacion": "89",
+                "alpha": "B+"
+              }
+            ]
+          },
+          {
+            "seccion": "ICS-202L",
+            "asignatura": "Laboratorio Algoritmo Maliciosos",
+            "horario": "Sa 11-13",
+            "curso": "GC312",
+            "docente": "Isaias Mercado",
+            "calificaciones": [
+              {
+                "trimestre": "8",
+                "calificacion": "95",
+                "alpha": "A"
+              }
+            ]
+          }
+        ]
       }
     ]
   }

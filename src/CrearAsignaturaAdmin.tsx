@@ -1,28 +1,20 @@
 import React, { useState } from 'react';
 import Sidebar from "./components/SidebarAdmin";
-import "./ModificarUsuarioEst.css";
+import "./CrearUsuarioEst.css";
 
 interface FormData {
-  usuario: string | '';
+  codigo: string | '';
   nombre: string;
-  contrasena: string;
-  apellido: string;
-  carrera: string;
-  mail: string;
+  departamento: string;
   activo: boolean;  // Agregar estado para activo
-  imagen: string;  // Agrega estado para la imagen
 }
 
-const ModificarUsuarioProfe: React.FC = () => {
+const CrearAsignaturaAdmin: React.FC = () => {
   const [formData, setFormData] = useState<FormData>({
-    usuario: '',
-    contrasena: '',
+    codigo: '',
     nombre: '',
-    apellido: '',
-    carrera: '',
-    mail: '',
+    departamento: '',
     activo: false,
-    imagen: '',
   });
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
@@ -36,44 +28,24 @@ const ModificarUsuarioProfe: React.FC = () => {
     <div className="home-page">
       <Sidebar />
 
-            {/* Nueva sección para modificar usuario */}
-            <div className="modify-user-section">
-        <h2>Modificar Estudiante</h2>
-        <input 
-          type="text" 
-          placeholder="Introduce ID de usuario" 
-        />
-        <button className="modify-button">Modificar</button>
-      </div>
-
+      {/* Nueva sección para modificar usuario */}
+      
       <div className="Mensaje">
         <form className="form-container">
           <div className="form-group">
-            <label htmlFor="nombre">Usuario:</label>
+            <label htmlFor="nombre">Codigo:</label>
             <input
               type="text"
               id="id"
               name="id"
-              value={formData.usuario}
+              value={formData.codigo}
               onChange={handleChange}
               required
             />
           </div>
 
           <div className="form-group">
-            <label htmlFor="contrasena">Contraseña:</label>
-            <input
-              type="password"
-              id="contrasena"
-              name="contrasena"
-              value={formData.contrasena}
-              onChange={handleChange}
-              required
-            />
-          </div>
-
-          <div className="form-group">
-            <label htmlFor="nombre">Nombre:</label>
+            <label htmlFor="nombre">Materia:</label>
             <input
               type="text"
               id="nombre"
@@ -85,23 +57,11 @@ const ModificarUsuarioProfe: React.FC = () => {
           </div>
 
           <div className="form-group">
-            <label htmlFor="apellido">Apellido:</label>
-            <input
-              type="text"
-              id="apellido"
-              name="apellido"
-              value={formData.apellido}
-              onChange={handleChange}
-              required
-            />
-          </div>
-
-          <div className="form-group">
-            <label htmlFor="carrera">Carrera:</label>
+            <label htmlFor="carrera">departamento:</label>
             <select 
               id="carrera" 
               name="carrera" 
-              value={formData.carrera}
+              value={formData.departamento}
               onChange={handleChange as any}
               required
             >
@@ -111,18 +71,6 @@ const ModificarUsuarioProfe: React.FC = () => {
               <option value="derecho">Ciencias Sociales y Humanidades</option>
               <option value="derecho">Economía y Negocio</option>
             </select>
-          </div>
-
-          <div className="form-group">
-            <label htmlFor="apellido">Mail</label>
-            <input
-              type="text"
-              id="apellido"
-              name="apellido"
-              value={formData.apellido}
-              onChange={handleChange}
-              required
-            />
           </div>
 
           <div className="form-group">
@@ -137,17 +85,7 @@ const ModificarUsuarioProfe: React.FC = () => {
             />
           </div>
 
-          <div className="form-group">
-            <label htmlFor="imagen">Subir imagen:</label>
-            <input
-              type="file"
-              id="imagen"
-              name="imagen"
-              onChange={e => setFormData({ ...formData, imagen: e.target.value })}
-            />
-          </div>
-
-          <button type="submit">Guardar</button>
+          <button type="submit">Crear</button>
         </form>
       </div>
       {/* Puedes agregar tu componente Table aquí */}
@@ -155,4 +93,4 @@ const ModificarUsuarioProfe: React.FC = () => {
   );
 };
 
-export default ModificarUsuarioProfe;
+export default CrearAsignaturaAdmin;
