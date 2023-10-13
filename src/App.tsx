@@ -19,6 +19,7 @@ import ModificarAsignaturaAdmin from "./ModificarAsignaturaAdmin";
 import ModificarUsuarioProfe from "./ModificarUsuarioProfe";
 import CrearAsignaturaAdmin from "./CrearAsignaturaAdmin";
 import CrearUsuarioProfesor from "./CrearUsuarioProfesor";
+import Seleccion from "./Seleccion";
 
 function App() {
   return (
@@ -50,18 +51,29 @@ function App() {
           <Route path="/HomePageProfe" element={<HomePageProfe />} />
           <Route path="/ProfilePageProfe" element={<ProfilePageProfe />} />
           <Route path="/HomePageAdmin" element={<HomePageAdmin />} />
+          <Route path="/Seleccion" element={<Seleccion />} />
           <Route path="/ProfileAdminPage" element={<ProfileAdminPage />} />
           <Route
             path="/ModificarUsuarioEst"
             element={<ModificarUsuarioEst />}
           />
           <Route path="/CrearUsuarioEst" element={<CrearUsuarioEst />} />
-          <Route path="/ModificarAsignaturaAdmin" element={<ModificarAsignaturaAdmin />} />
-          <Route path="/ModificarUsuarioProfe" element={<ModificarUsuarioProfe />} />
-          <Route path="/CrearAsignaturaAdmin" element={<CrearAsignaturaAdmin />} />
-          <Route path="/CrearUsuarioProfesor" element={<CrearUsuarioProfesor />} />
-          
-
+          <Route
+            path="/ModificarAsignaturaAdmin"
+            element={<ModificarAsignaturaAdmin />}
+          />
+          <Route
+            path="/ModificarUsuarioProfe"
+            element={<ModificarUsuarioProfe />}
+          />
+          <Route
+            path="/CrearAsignaturaAdmin"
+            element={<CrearAsignaturaAdmin />}
+          />
+          <Route
+            path="/CrearUsuarioProfesor"
+            element={<CrearUsuarioProfesor />}
+          />
         </Routes>
       </div>
     </Router>

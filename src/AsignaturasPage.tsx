@@ -68,6 +68,9 @@ const AsignaturasPage: React.FC = () => {
           </TableBody>
         </Table>
       </div>
+      <Link to="/Seleccion" className="link">
+        <button className="btnSeleccion">Seleccion</button>
+      </Link>
     </div>
   );
 };

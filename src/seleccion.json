@@ -1,0 +1,145 @@
+{
+    "asignaturas": [
+      {
+        "id": 1,
+        "Asignatura": "Matemáticas",
+        "Horario": "Lu 10-12",
+        "docente": "John Doe",
+        "seccion": "MAT101-01"
+      },
+      {
+        "id": 2,
+        "Asignatura": "Ciencias",
+        "Horario": "Ma 11-13",
+        "docente": "Jane Doe",
+        "seccion": "CIE102-02"
+      },
+      {
+        "id": 3,
+        "Asignatura": "Historia",
+        "Horario": "Mi 10-12",
+        "docente": "Jim Beam",
+        "seccion": "HIS103-03"
+      },
+      {
+        "id": 4,
+        "Asignatura": "Biología",
+        "Horario": "Ju 10-12",
+        "docente": "Alice Johnson",
+        "seccion": "BIO104-01"
+      },
+      {
+        "id": 5,
+        "Asignatura": "Química",
+        "Horario": "Vi 10-12",
+        "docente": "Bob Smith",
+        "seccion": "CHE105-02"
+      },
+      {
+        "id": 6,
+        "Asignatura": "Física",
+        "Horario": "Sa 11-13",
+        "docente": "Carol White",
+        "seccion": "PHY106-03"
+      },
+      {
+        "id": 7,
+        "Asignatura": "Geografía",
+        "Horario": "Lu 12-14",
+        "docente": "David Brown",
+        "seccion": "GEO107-01"
+      },
+      {
+        "id": 8,
+        "Asignatura": "Economía",
+        "Horario": "Ma 13-15",
+        "docente": "Edward Green",
+        "seccion": "ECO108-02"
+      },
+      {
+        "id": 9,
+        "Asignatura": "Literatura",
+        "Horario": "Mi 14-16",
+        "docente": "Fiona White",
+        "seccion": "LIT109-03"
+      },
+      {
+        "id": 10,
+        "Asignatura": "Arte",
+        "Horario": "Ju 11-13",
+        "docente": "George Black",
+        "seccion": "ART110-01"
+      },
+      {
+        "id": 11,
+        "Asignatura": "Música",
+        "Horario": "Vi 12-14",
+        "docente": "Helen Yellow",
+        "seccion": "MUS111-02"
+      },
+      {
+        "id": 12,
+        "Asignatura": "Filosofía",
+        "Horario": "Sa 14-16",
+        "docente": "Igor Pink",
+        "seccion": "PHI112-03"
+      },
+      {
+        "id": 13,
+        "Asignatura": "Psicología",
+        "Horario": "Lu 15-17",
+        "docente": "Jack Orange",
+        "seccion": "PSY113-01"
+      },
+      {
+        "id": 14,
+        "Asignatura": "Sociología",
+        "Horario": "Ma 14-16",
+        "docente": "Kara Blue",
+        "seccion": "SOC114-02"
+      },
+      {
+        "id": 15,
+        "Asignatura": "Política",
+        "Horario": "Mi 12-14",
+        "docente": "Larry Violet",
+        "seccion": "POL115-03"
+      },
+      {
+        "id": 16,
+        "Asignatura": "Derecho",
+        "Horario": "Ju 14-16",
+        "docente": "Maria Grey",
+        "seccion": "LAW116-01"
+      },
+      {
+        "id": 17,
+        "Asignatura": "Ingeniería",
+        "Horario": "Vi 15-17",
+        "docente": "Nina Indigo",
+        "seccion": "ENG117-02"
+      },
+      {
+        "id": 18,
+        "Asignatura": "Arquitectura",
+        "Horario": "Sa 13-15",
+        "docente": "Oscar Red",
+        "seccion": "ARC118-03"
+      },
+      {
+        "id": 19,
+        "Asignatura": "Medicina",
+        "Horario": "Lu 13-15",
+        "docente": "Peter Cyan",
+        "seccion": "MED119-01"
+      },
+      {
+        "id": 20,
+        "Asignatura": "Enfermería",
+        "Horario": "Ma 12-14",
+        "docente": "Quinn Green",
+        "seccion": "NUR120-02"
+      }
+    ]
+  }
+  
