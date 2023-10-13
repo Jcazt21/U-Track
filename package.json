@@ -9,6 +9,11 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@emotion/react": "^11.11.1",
+    "@emotion/styled": "^11.11.0",
+    "@mui/material": "^5.14.13",
+    "@mui/styled-engine-sc": "^6.0.0-alpha.1",
+    "@mui/x-data-grid": "^6.16.2",
     "@radix-ui/react-checkbox": "^1.0.4",
     "@radix-ui/react-dropdown-menu": "^2.0.6",
     "@radix-ui/react-slot": "^1.0.2",
@@ -36,6 +41,7 @@
     "react-router-dom": "^6.16.0",
     "setuptools": "^0.0.1",
     "shadcn-ui": "^0.4.1",
+    "styled-components": "^6.0.9",
     "tailwind-merge": "^1.14.0",
     "tailwindcss-animate": "^1.0.7",
     "tzdata": "^1.0.38",
