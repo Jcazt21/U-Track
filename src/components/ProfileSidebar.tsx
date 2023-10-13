@@ -1,39 +1,40 @@
 import React, { useEffect, useState } from "react";
 import "./ProfileSidebar.css";
+import estudiantes from "./estudiantes.json"; // Asegúrate de que la ruta al archivo JSON es correcta
 import PieChart from "./PieChart"; // Asegúrate de reemplazar './PieChart' con la ruta real al archivo
 
-interface EstudianteInfo {
-  Nombre_Estudiante: string;
-  ID_Estudiante: number;
-  Indice: number;
-  // ... otros campos según sea necesario
-}
-
 const ProfileSidebar: React.FC = () => {
-  const [estudiante, setEstudiante] = useState<EstudianteInfo | null>(null);
+  const [estudiante, setEstudiante] = useState<any>(null);
 
   useEffect(() => {
-    const userInfo = localStorage.getItem("userInfo");
+    const usuarioId = localStorage.getItem("usuarioId");
 
-    if (userInfo) {
-      const estudianteInfo = JSON.parse(userInfo) as EstudianteInfo;
-      setEstudiante(estudianteInfo);
+    if (usuarioId) {
+      const estudianteEncontrado = estudiantes.estudiantes.find(
+        (est) => est.usuarioId.toString() === usuarioId
+      );
+
+      if (estudianteEncontrado) {
+        setEstudiante(estudianteEncontrado);
+      }
     }
   }, []);
 
   if (!estudiante) return null;
 
-  const indiceCalculado = (estudiante.Indice * 4) / 100;
+  const { nombre, usuarioId, indice, imagen } = estudiante;
 
   return (
     <div className="profile-sidebar-container">
       <div className="profile-sidebar">
-        {/* ... otros elementos */}
-        <h2 className="username">{estudiante.Nombre_Estudiante}</h2>
-        <p className="institutional-id">{estudiante.ID_Estudiante}</p>
-        <p className="indiceG">{indiceCalculado.toFixed(2)}</p> {/* Asegúrate de ajustar la precisión según sea necesario */}
+        <div className="profile-picture">
+          <img src={imagen || "public/prof.png"} alt="User Profile" />
+        </div>
+        <h2 className="username">{nombre}</h2>
+        <p className="institutional-id">{usuarioId}</p>
+        <p className="indiceG">{indice}</p>
         <div className="pie-chart-container">
-          <PieChart indice={indiceCalculado} /> {/* Pasar el índice calculado como una prop */}
+          <PieChart indice={indice} /> {/* Pasar el índice como una prop */}
         </div>
       </div>
     </div>
