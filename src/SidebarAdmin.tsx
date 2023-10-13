@@ -1,9 +1,19 @@
-import React, { useState } from "react";
+import React, { useState } from 'react';
 import { Link } from "react-router-dom";
-import "./SidebarAdmin.css";
+import "./Sidebar.css";
+import SidebarAdmin2 from './SidebarAdmin2';
+import SidebarAdmin3 from './SidebarAdmin3';
 
-const SidebarAdmin: React.FC = () => {
-  const [selectedOption, setSelectedOption] = useState<string | null>(null);
+function SidebarAdmin() {
+  const [openMenu, setOpenMenu] = useState("");  // Usamos para determinar qué menú mostrar
+
+  const toggleSidebar = (menu: React.SetStateAction<string>) => {
+    if (openMenu === menu) {
+      setOpenMenu("");
+    } else {
+      setOpenMenu(menu);
+    }
+  };
 
   return (
     <div className="sidebar-container">
@@ -11,50 +21,34 @@ const SidebarAdmin: React.FC = () => {
         <h2 className="sidebar-title">U-Track</h2>
         <ul className="list-unstyled">
           <li>
-            <Link to="/HomePage">
-              <i className="fas fa-home"></i> Perfil
+            <Link to="/HomePageAdmin">
+              <i className="fas fa-home"></i> Panel
             </Link>
           </li>
-          <li 
-            onClick={() => setSelectedOption('gestionarPerfil')}
-          >
-            <Link to="/ProfilePage">
-              <i className="fas fa-user"></i> Gestionar Perfil
+          <li>
+            <Link to="/ProfileAdminPage">
+              <i className="fas fa-user"></i> Perfil
             </Link>
           </li>
-          <li 
-            onClick={() => setSelectedOption('gestionarAsignaturas')}
-          >
-            <Link to="/AsignaturasPage">
-              <i className="fas fa-book"></i> Gestionar Asignaturas
-            </Link>
+          <li>
+            <a onClick={() => toggleSidebar("users")}>
+              <i className="fas fa-clipboard-list"></i> Gestionar Usuarios
+            </a>
+            {openMenu === "users" && <SidebarAdmin2 />}
+          </li>
+          <li>
+            <a onClick={() => toggleSidebar("subjects")}>
+              <i className="fas fa-clipboard-list"></i> Gestionar Asignatura
+            </a>
+            {openMenu === "subjects" && <SidebarAdmin3 />}
           </li>
         </ul>
         <Link to="/">
           <button className="logout">Cerrar Sesion</button>
         </Link>
       </div>
-      
-      {selectedOption && (
-        <div className="sidebar secondary">
-          <ul className="list-unstyled">
-            {selectedOption === 'gestionarPerfil' && (
-              <>
-                <li><Link to="/CrearPerfil">Crear Perfil</Link></li>
-                <li><Link to="/ModificarPerfil">Modificar Perfil</Link></li>
-              </>
-            )}
-            {selectedOption === 'gestionarAsignaturas' && (
-              <>
-                <li><Link to="/CrearAsignatura">Crear Asignatura</Link></li>
-                <li><Link to="/ModificarAsignatura">Modificar Asignatura</Link></li>
-              </>
-            )}
-          </ul>
-        </div>
-      )}
     </div>
   );
-};
+}
 
 export default SidebarAdmin;

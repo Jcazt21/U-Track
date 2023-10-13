@@ -20,6 +20,7 @@ import ModificarUsuarioProfe from "./ModificarUsuarioProfe";
 import CrearAsignaturaAdmin from "./CrearAsignaturaAdmin";
 import CrearUsuarioProfesor from "./CrearUsuarioProfesor";
 import Seleccion from "./Seleccion";
+import GestionAsignaturaPage from "./GestionAsignaturaPage";
 
 function App() {
   return (
@@ -53,6 +54,8 @@ function App() {
           <Route path="/HomePageAdmin" element={<HomePageAdmin />} />
           <Route path="/Seleccion" element={<Seleccion />} />
           <Route path="/ProfileAdminPage" element={<ProfileAdminPage />} />
+          <Route path="/GestionAsignaturaPage" element={<GestionAsignaturaPage />} />
+
           <Route
             path="/ModificarUsuarioEst"
             element={<ModificarUsuarioEst />}
