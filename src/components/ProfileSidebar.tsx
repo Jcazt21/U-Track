@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from "react";
 import "./ProfileSidebar.css";
-import PieChart from "./PieChart"; // Asegúrate de reemplazar './PieChart' con la ruta real al archivo
+import PieChart from "./PieChart";
 
 interface EstudianteInfo {
-  Nombre_Estudiante: string;
-  ID_Estudiante: number;
-  Indice: number;
+  nombre: string;
+  usuarioId: number;
+  indice: number;
   // ... otros campos según sea necesario
 }
 
@@ -23,17 +23,17 @@ const ProfileSidebar: React.FC = () => {
 
   if (!estudiante) return null;
 
-  const indiceCalculado = (estudiante.Indice * 4) / 100;
-
   return (
     <div className="profile-sidebar-container">
       <div className="profile-sidebar">
         {/* ... otros elementos */}
-        <h2 className="username">{estudiante.Nombre_Estudiante}</h2>
-        <p className="institutional-id">{estudiante.ID_Estudiante}</p>
-        <p className="indiceG">{indiceCalculado.toFixed(2)}</p> {/* Asegúrate de ajustar la precisión según sea necesario */}
+        <h2 className="username">{estudiante.nombre}</h2>
+        <p className="institutional-id">{estudiante.usuarioId}</p>
+        <p className="indiceG">{estudiante.indice.toFixed(2)}</p>{" "}
+        {/* Mostrando el índice directamente del JSON */}
         <div className="pie-chart-container">
-          <PieChart indice={indiceCalculado} /> {/* Pasar el índice calculado como una prop */}
+          <PieChart indice={estudiante.indice} />{" "}
+          {/* Pasando el índice directamente como una prop */}
         </div>
       </div>
     </div>

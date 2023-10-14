@@ -1,59 +1,62 @@
 import React, { useState } from "react";
 import { useNavigate, Link } from "react-router-dom";
-import axios from 'axios';  // Importa Axios
 import "./LoginForm.css";
+import estudiantes from "./estudiantes.json";
+import profesores from "./profesores.json";
+import administradores from "./administradores.json";
+
+interface User {
+  usuarioId: number;
+  password: string;
+  rol?: string;
+  // ...otros campos
+}
 
 const LoginForm: React.FC = () => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const navigate = useNavigate();
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
 
-    try {
-      // Hacer una solicitud POST al endpoint de autenticación
-      const response = await axios.post('http://127.0.0.1:8000/token/', {  // Asegúrate de usar la URL correcta para tu endpoint
-        username: username,
-        password: password,
-      });
+    const allUsers = [
+      ...estudiantes.estudiantes,
+      ...profesores.profesores,
+      ...administradores.administradores,
+    ] as User[];
 
-      if (response.data.access) {
-        localStorage.setItem('accessToken', response.data.access);
+    const user = allUsers.find(
+      (user) =>
+        user.usuarioId.toString() === username && user.password === password
+    );
 
-            // Guardar user_info en el localStorage
-      // Guardar user_info en el localStorage
-      if (response.data.user_info) {
-        localStorage.setItem('userInfo', JSON.stringify(response.data.user_info));
-      }
+    if (user) {
+      localStorage.setItem("userInfo", JSON.stringify(user));
+      localStorage.setItem("usuarioId", user.usuarioId.toString()); // Almacenar usuarioId en localStorage
 
-      
-        // Redirige basado en el tipo de usuario
-        switch(response.data.user_type) {
-          case 'estudiante':
-            navigate('/HomePage');
+      if (user.rol) {
+        switch (user.rol.toLowerCase()) {
+          case "estudiante":
+            navigate("/HomePage");
             break;
-          case 'profesor':
-            navigate('/HomePageProfe');
+          case "profesor":
+            navigate("/HomePageProfe");
             break;
-          case 'administrador':
-            navigate('/HomePageAdmin');
+          case "administrador":
+            navigate("/HomePageAdmin");
             break;
           default:
-            console.error('Tipo de usuario desconocido');
-
+            console.error("Tipo de usuario no reconocido");
+            break;
         }
       } else {
-        console.error('Error en la autenticación');
+        console.error("Rol no definido para el usuario.");
       }
-    } catch (error) {
-      console.error('Error en la autenticación', error);
+    } else {
+      console.error("Credenciales incorrectas. Por favor, intenta de nuevo.");
     }
   };
-
-
-  const userInfo = JSON.parse(localStorage.getItem('userInfo') || '{}');
-  console.log(userInfo);  // Imprimir la información del usuario en la consola
 
   return (
     <form onSubmit={handleSubmit} className="login-form">

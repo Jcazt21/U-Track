@@ -6,6 +6,7 @@
         "apellido": "García",
         "usuarioId": 6,
         "email": "ana@ejemplo.com",
+        "rol": "administrador",
         "password": "contraseña789",
         "imagen": "url/de/la/imagen",
         "activo": true,

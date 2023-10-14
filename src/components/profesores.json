@@ -8,6 +8,7 @@
         "email": "juan@ejemplo.com",
         "password": "1234",
         "carrera": "Ingeniería",
+        "rol": "profesor",
         "usuarioId": 50,
         "imagen": "url/de/la/imagen",
         "activo": true,
